@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../static/style/style.css" type="text/css" />
+    <link href='../static/images/ico.png' rel='icon' type='image/png'>
+    
+    <title>{{ title }}</title>
+</head>
+<body>
+    
+    <div id='head'>SPAL</div>
+    
+    
+    <div id="hat"></div>
+
+
+
+
+        <div id="cont">
+            {% for item in posts %}
+                <div id="post">
+                    <div>
+
+                    </div>
+                    <img src="../static/data/img/{{ item.id }}.png" id="post_image">
+                    <div>
+                        text
+                    </div>
+                    <div id="sep"> what </div>
+                </div>
+            {% endfor %}
+
+            <a href="{{ url_for("index", page=next_page)}}" id="next">next</a>
+            <a href="{{ url_for("index", page=next_page - 2)}}" id="back">back</a>
+        </div>
+
+    
+
+
+
+</body>
+</html>

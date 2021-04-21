@@ -11,6 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>flask_</Name>
     <RootNamespace>flask_</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +22,49 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="config.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="flask_.py" />
+    <Compile Include="script.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.8</Version>
+      <Description>env (Python 3.8 (32-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X86</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="static\" />
+    <Folder Include="static\data\" />
+    <Folder Include="static\data\img\" />
+    <Folder Include="static\images\" />
+    <Folder Include="static\style\" />
+    <Folder Include="templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="static\data\data.csv" />
+    <Content Include="static\data\img\0.png" />
+    <Content Include="static\data\img\1.png" />
+    <Content Include="static\data\img\2.png" />
+    <Content Include="static\data\img\3.png" />
+    <Content Include="static\data\img\4.png" />
+    <Content Include="static\images\analyse-systemique2.png" />
+    <Content Include="static\images\bg.jpg" />
+    <Content Include="static\images\head.png" />
+    <Content Include="static\images\head1.png" />
+    <Content Include="static\images\head2.png" />
+    <Content Include="static\images\ico.png" />
+    <Content Include="static\style\style.css" />
+    <Content Include="templates\main_page.html" />
+    <Content Include="templates\index.html" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
