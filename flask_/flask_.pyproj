@@ -50,6 +50,9 @@
     <Folder Include="templates\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="static\data\creators.csv">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="static\data\data.csv" />
     <Content Include="static\data\img\0.png" />
     <Content Include="static\data\img\1.png" />
@@ -63,8 +66,11 @@
     <Content Include="static\images\head2.png" />
     <Content Include="static\images\ico.png" />
     <Content Include="static\style\style.css" />
+    <Content Include="templates\login.html" />
     <Content Include="templates\main_page.html" />
     <Content Include="templates\index.html" />
+    <Content Include="templates\new_post.html" />
+    <Content Include="templates\post.html" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

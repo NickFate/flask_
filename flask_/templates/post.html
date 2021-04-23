@@ -5,47 +5,32 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../static/style/style.css" type="text/css" />
     <link href='../static/images/ico.png' rel='icon' type='image/png'>
-    
     <title>{{ title }}</title>
 </head>
 <body>
-    
+
     <div id='head'>SPAL</div>
-    
-    
+
+
     <div id="hat"></div>
 
 
 
 
     <div id="cont">
-        {% for item in posts %}
         <div id="post">
             <div>
+
             </div>
-            <div id="creator">{{ item.creator }}</div>
-            <img src="../static/data/img/{{ item.image }}.png" id="post_image">
+            <div id="creator">{{ post.creator }}</div>
+            <img src="../static/data/img/{{ post.image }}.png" id="post_image">
             <div>
                 text
             </div>
             <div id="sep"> what </div>
         </div>
-        {% endfor %}
-
-        
-        {% if page %}
-            <a href="{{ url_for("index", page=page - 1)}}" id="back">back</a>
-        {% endif %}
-        
-        <a href="{{ url_for("index", page=page + 1)}}" id="next">next</a>
-        
-
 
     </div>
-
-    
-
-
 
 </body>
 </html>

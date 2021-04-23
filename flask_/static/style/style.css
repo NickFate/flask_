@@ -10,7 +10,9 @@ body {
 }
 
 div {
+
 }
+
 #cont {
     position: relative;
     left: 5%;
@@ -48,7 +50,10 @@ div {
     margin-top: 10%;
 }
 
-
+#creator {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
 
 a {
     color: #6DAE70;
