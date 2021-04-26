@@ -22,7 +22,15 @@
             <div>
 
             </div>
-            <div id="creator">{{ post.creator }}</div>
+            <div id="creator">
+                <img src="../static/data/avatar/{{ post.creator_id }}.png">
+                {{ post.creator }}
+            </div>
+
+            <div id="tags">
+                {{ post.tags }}
+            </div>
+
             <img src="../static/data/img/{{ post.image }}.png" id="post_image">
             <div>
                 text

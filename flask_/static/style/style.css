@@ -41,6 +41,8 @@ div {
 }
 
 
+
+
 #post {
     
 }
@@ -51,8 +53,20 @@ div {
 }
 
 #creator {
+    display: inline-block;
     padding-top: 2%;
     padding-bottom: 2%;
+    vertical-align: central;
+}
+
+
+#cr {
+    vertical-align: central;
+}
+
+#creator img {
+    width: 4%;
+    height: 4%;
 }
 
 a {

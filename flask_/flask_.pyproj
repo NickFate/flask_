@@ -26,6 +26,19 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="flask_.py" />
+    <Compile Include="modules\creator.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="modules\database.py" />
+    <Compile Include="modules\post.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="modules\render.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="modules\userlogin.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="script.py">
       <SubType>Code</SubType>
     </Compile>
@@ -42,14 +55,17 @@
     </Interpreter>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="modules\" />
     <Folder Include="static\" />
     <Folder Include="static\data\" />
     <Folder Include="static\data\img\" />
     <Folder Include="static\images\" />
+    <Folder Include="static\data\avatar\" />
     <Folder Include="static\style\" />
     <Folder Include="templates\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="static\data\avatar\0.png" />
     <Content Include="static\data\creators.csv">
       <SubType>Code</SubType>
     </Content>
@@ -71,6 +87,8 @@
     <Content Include="templates\index.html" />
     <Content Include="templates\new_post.html" />
     <Content Include="templates\post.html" />
+    <Content Include="templates\p_creator.html" />
+    <Content Include="templates\register.html" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

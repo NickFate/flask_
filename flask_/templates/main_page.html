@@ -9,11 +9,27 @@
     <title>{{ title }}</title>
 </head>
 <body>
-    
+
     <div id='head'>SPAL</div>
-    
-    
-    <div id="hat"></div>
+
+
+    <div id="hat">
+        <div>
+            <a href="{{ url_for("load_post")}}" id="back">Новый пост</a>
+        </div>
+    </div>
+
+    <div>
+        {% if not curent_user %}
+        <a href="{{ url_for("register", message="")}}" id="back">Зарегистрироваться</a>
+        {% endif %}
+    </div>
+
+    <div>
+        {% if not curent_user %}
+        <a href="{{ url_for("register", message="")}}" id="back">Войти</a>
+        {% endif %}
+    </div>
 
 
 
@@ -23,27 +39,35 @@
         <div id="post">
             <div>
             </div>
-            <div id="creator">{{ item.creator }}</div>
+            <div id="creator">
+                <img src="../static/data/avatar/{{ item.creator_id }}.png">
+                {{ item.creator }}
+            </div>
+
+            <div id="tags">
+                {{ item.tags }}
+            </div>
+
             <img src="../static/data/img/{{ item.image }}.png" id="post_image">
             <div>
-                text
+                {{ item.text }}
             </div>
             <div id="sep"> what </div>
         </div>
         {% endfor %}
 
-        
+
         {% if page %}
-            <a href="{{ url_for("index", page=page - 1)}}" id="back">back</a>
+        <a href="{{ url_for("index", page=page - 1)}}" id="back">back</a>
         {% endif %}
-        
+
         <a href="{{ url_for("index", page=page + 1)}}" id="next">next</a>
-        
+
 
 
     </div>
 
-    
+
 
 
 
